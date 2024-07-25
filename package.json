@@ -1,0 +1,31 @@
+{
+  "name": "EncryptShare",
+  "version": "1.0.0",
+  "description": "File Uploader Project || Designed by koushik",
+  "main": "server.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "webpack --config webpack.prod.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "node server.js",
+    "client": "cd file-uploader-frontend && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-zip": "^3.0.0",
+    "mongoose": "^8.5.1",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
