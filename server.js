@@ -5,6 +5,8 @@ const { v4: uuidv4 } = require('uuid');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const zip = require('express-zip');
+const port = process.env.PORT || 5001;
+
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://koushikadakka2004:Emosort2004@logindatabase.f1qljez.mongodb.net/FileSeeker?retryWrites=true&w=majority');
@@ -70,6 +72,6 @@ app.post('/download', async (req, res) => {
     res.zip(files, `${uniqueCode}.zip`);
 });
 
-app.listen(5000, () => {
-    console.log('Server started on http://localhost:5000');
+app.listen(port, () => {
+    console.log(`Server started on http://localhost:${port}`);
 });
