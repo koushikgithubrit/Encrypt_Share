@@ -23,7 +23,7 @@ const FileUpload = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:5002/upload', formData);
+            const response = await axios.post('https://encrypt-share-beta.vercel.app/upload', formData);
             setUniqueCode(response.data.uniqueCode);
         } catch (error) {
             console.error('Error uploading files:', error);
