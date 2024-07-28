@@ -154,7 +154,7 @@ app.post('/download', async (req, res) => {
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 // All other GET requests not handled before will return the React app
-app.get('https://encrypt-share-beta.vercel.app/', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
