@@ -78,6 +78,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import ProgressBar from './SpinnerLoading';
+const API_URL = process.env.REACT_APP_API_URL;
 
 const Download = () => {
     const [uniqueCode, setUniqueCode] = useState('');
@@ -93,7 +94,7 @@ const Download = () => {
         setIsLoading(true);
         setError('');
         try {
-            const response = await axios.post('http://localhost:5001/download', { uniqueCode }, {
+            const response = await axios.post(`${API_URL}/download`, { uniqueCode }, {
                 responseType: 'blob'
             });
 

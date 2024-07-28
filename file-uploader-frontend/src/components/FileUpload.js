@@ -95,6 +95,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+const API_URL = process.env.REACT_APP_API_URL;
 
 const FileUpload = () => {
     const [files, setFiles] = useState([]);
@@ -118,7 +119,7 @@ const FileUpload = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:5001/upload', formData);
+            const response = await axios.post(`${API_URL}/upload`, formData);
             setUniqueCode(response.data.uniqueCode);
         } catch (error) {
             console.error('Error uploading files:', error);
