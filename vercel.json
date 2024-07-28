@@ -17,5 +17,9 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "/server.js" },
     { "src": "/(.*)", "dest": "file-uploader-frontend/build/$1" }
+  ],
+
+  "rewrites": [
+    {"source": "/(.*)", "destination":"/"}
   ]
 }
