@@ -250,7 +250,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'file-uploader-frontend/build', 'index.html'));
 });
 
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 5002;
 app.listen(port, () => {
     console.log(`Server started on http://localhost:${port}`);
 });
