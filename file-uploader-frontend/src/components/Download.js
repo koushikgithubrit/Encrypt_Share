@@ -16,7 +16,7 @@ const Download = () => {
         setIsLoading(true);
         setError('');
         try {
-            const response = await axios.post('http://localhost:5002/download', { uniqueCode }, {
+            const response = await axios.post('https://encrypt-share-beta.vercel.app/download', { uniqueCode }, {
                 responseType: 'blob'
             });
 
