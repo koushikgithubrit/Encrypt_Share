@@ -4,8 +4,8 @@
   "description": "File Uploader Project || Designed by koushik",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "webpack --config webpack.prod.js",
+    "start": "concurrently \"npm run server\" \"npm run client\" \"node server.js",
+    "build": "cd file-uploader-frontend && npm install && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node server.js",
@@ -34,6 +34,8 @@
     "mini-css-extract-plugin": "^2.9.0",
     "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.88.1",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+     "express": "^4.17.1",
+    "path": "^0.12.7"
   }
 }

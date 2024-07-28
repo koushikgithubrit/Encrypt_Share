@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "name": "EncryptShare",
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "file-uploader-frontend/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "file-uploader-frontend/build"
+        }
+      }
+    ],
+    "routes": [
+      { "src": "/api/(.*)", "dest": "/server.js" },
+      { "src": "/(.*)", "dest": "/file-uploader-frontend/build/$1" }
+    ]
+  }
+  
