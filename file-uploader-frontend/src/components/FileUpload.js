@@ -23,7 +23,7 @@ const FileUpload = () => {
         }
 
         try {
-            const response = await axios.post('https://encrypt-share-beta.vercel.app/upload', formData);
+            const response = await axios.post('http://localhost:5050/upload', formData);
             setUniqueCode(response.data.uniqueCode);
         } catch (error) {
             console.error('Error uploading files:', error);
@@ -32,7 +32,7 @@ const FileUpload = () => {
 
     const handleCopy = () => {
         navigator.clipboard.writeText(uniqueCode).then(() => {
-            alert('Unique code copied to clipboard!');
+            // alert('Unique code copied to clipboard!');
         }).catch(err => {
             console.error('Failed to copy the unique code:', err);
         });

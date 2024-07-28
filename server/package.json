@@ -5,11 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "cd file-uploader-frontend && npm install && npm run build",
+    "build": "npm install && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node server.js",
-    "client": "cd file-uploader-frontend && npm start"
+    "client": "cd ./file-uploader-frontend && npm start"
   },
   "keywords": [],
   "author": "",
