@@ -31,7 +31,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: '../Encrypt_Share/index.html',
+      template: '../Encrypt_Share/server.js',
       minify: {
         removeComments: true,
         collapseWhitespace: true,

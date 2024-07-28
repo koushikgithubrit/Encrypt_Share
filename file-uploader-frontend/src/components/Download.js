@@ -16,7 +16,7 @@ const Download = () => {
         setIsLoading(true);
         setError('');
         try {
-            const response = await axios.post('https://encrypt-share-chi.vercel.app/download', { uniqueCode }, {
+            const response = await axios.post('https://stellular-meerkat-dfd6e8.netlify.app/download', { uniqueCode }, {
                 responseType: 'blob'
             });
 
