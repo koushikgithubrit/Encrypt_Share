@@ -139,3 +139,11 @@ const Download = () => {
 };
 
 export default Download;
+
+
+
+
+
+ // "rewrites": [
+  //   {"source": "/(.*)", "destination":"/"}
+  // ]
