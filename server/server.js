@@ -91,6 +91,7 @@ mongoose.connect('mongodb+srv://koushikadakka2004:Emosort2004@logindatabase.f1ql
 
 const app = express();
 app.use(cors());
+app.use(cors({origin: true, credentials: true}));
 app.use(express.json());
 
 const storage = multer.diskStorage({

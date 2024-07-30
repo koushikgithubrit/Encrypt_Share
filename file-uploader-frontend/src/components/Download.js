@@ -16,7 +16,7 @@ const Download = () => {
         setIsLoading(true);
         setError('');
         try {
-            const response = await axios.post('https://stellular-meerkat-dfd6e8.netlify.app/download', { uniqueCode }, {
+            const response = await axios.post('http://localhost:5050/download', { uniqueCode }, {
                 responseType: 'blob'
             });
 
@@ -27,7 +27,6 @@ const Download = () => {
             document.body.appendChild(link);
             link.click();
             link.remove();
-
             setIsLoading(false);
         } catch (err) {
             setIsLoading(false);
