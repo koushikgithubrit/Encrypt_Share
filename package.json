@@ -2,14 +2,14 @@
   "name": "EncryptShare",
   "version": "1.0.0",
   "description": "File Uploader Project || Designed by koushik",
-  "main": "server/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "concurrently \"npm run server\" \"npm run file-uploader-frontend\"",
     "build":"npm install && npm install --prefix file-uploader-frontend && npm run build --prefix file-uploader-frontend",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node server/server.js",
-    "client": "cd ./file-uploader-frontend && npm start"
+    "client": "cd file-uploader-frontend && npm start"
   },
   "keywords": [],
   "author": "",

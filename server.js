@@ -91,7 +91,7 @@ mongoose.connect('mongodb+srv://koushikadakka2004:Emosort2004@logindatabase.f1ql
 
 const app = express();
 app.use(cors());
-app.use(cors({origin: true, credentials: true}));
+app.use(cors({origin: true, credentials:true}));
 app.use(express.json());
 
 const storage = multer.diskStorage({
@@ -152,11 +152,11 @@ app.post('/download', async (req, res) => {
 });
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../file-uploader-frontend/build')));
+app.use(express.static(path.join(__dirname, 'file-uploader-frontend/build')));
 
 // All other GET requests not handled before will return the React app
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../file-uploader-frontend/build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'file-uploader-frontend/build', 'index.html'));
 });
 
 const port = process.env.PORT || 5050;
