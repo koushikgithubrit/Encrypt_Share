@@ -20,4 +20,4 @@ export const downloadFiles = async (uniqueCode) => {
     } catch (error) {
         throw new Error('Invalid code');
     }
-};
+}

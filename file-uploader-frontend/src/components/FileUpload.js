@@ -85,7 +85,7 @@
 
 
 import React, { useState } from 'react';
-import { uploadFiles } from '../apiService';
+import { uploadFiles } from '../components/apiService';
 
 const FileUpload = () => {
     const [files, setFiles] = useState([]);

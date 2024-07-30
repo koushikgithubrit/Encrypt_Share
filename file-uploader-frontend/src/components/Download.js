@@ -67,7 +67,7 @@
 // trial
 
 import React, { useState } from 'react';
-import { downloadFiles } from '../apiService';
+import { downloadFiles } from '../components/apiService';
 import ProgressBar from './SpinnerLoading';
 
 const Download = () => {
