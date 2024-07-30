@@ -152,11 +152,11 @@ app.post('/download', async (req, res) => {
 });
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'file-uploader-frontend/build')));
+app.use(express.static(path.join(__dirname, '../file-uploader-frontend/build')));
 
 // All other GET requests not handled before will return the React app
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'file-uploader-frontend/build', 'index.html'));
+    res.sendFile(path.join(__dirname, '../file-uploader-frontend/build', 'index.html'));
 });
 
 const port = process.env.PORT || 5050;
