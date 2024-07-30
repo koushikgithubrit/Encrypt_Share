@@ -16,7 +16,7 @@ const Download = () => {
         setIsLoading(true);
         setError('');
         try {
-            const response = await axios.post('http://localhost:5050/download', { uniqueCode }, {
+            const response = await axios.post('http://localhost:10000/download', { uniqueCode }, {
                 responseType: 'blob'
             });
 
