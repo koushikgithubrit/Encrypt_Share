@@ -1,5 +1,5 @@
 # EncryptShare
-Languages: Reactjs, TailwindCSS, Nodejs, Express.js, Mongosse
+Languages: Reactjs, TailwindCSS, Nodejs, Express.js, Mongoosse
 run code:
 Encrypt_Share>node server.js &&
 Encrypt_Share> cd file-uploader-frontend > npm start
