@@ -1,6 +1,6 @@
 # EncryptShare
 run code:
-Encrypt_Share>node server.js
+Encrypt_Share>node server.js &&
 Encrypt_Share> cd file-uploader-frontend > npm start
 
 Project details:
