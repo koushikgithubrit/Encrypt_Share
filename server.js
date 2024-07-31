@@ -42,7 +42,10 @@ const FileSchema = new mongoose.Schema({
 });
 
 const FileModel = mongoose.model('File', FileSchema);
-
+app.get("/test",(req,res)=>{
+    console.log("Test endpoint called");
+    
+})
 app.post('/upload', upload.array('files'), async (req, res) => {
     try {
         const files = req.files.map((file, index) => ({
