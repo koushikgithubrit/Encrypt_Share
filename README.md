@@ -1,7 +1,10 @@
 # EncryptShare
+Languages: Reactjs, TailwindCSS, Nodejs, Express.js, Mongosse
 run code:
 Encrypt_Share>node server.js &&
 Encrypt_Share> cd file-uploader-frontend > npm start
+
+
 
 Project details:
 1. Effortlessly upload your files up to 100 GB and receive a secret code to securely share your data with
