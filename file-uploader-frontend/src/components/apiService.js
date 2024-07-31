@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:10000';
+const API_BASE_URL = 'https://encrypt-share.onrender.com:10000';
 
 export const uploadFiles = async (formData) => {
     try {

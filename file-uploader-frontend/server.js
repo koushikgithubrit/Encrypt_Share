@@ -47,6 +47,9 @@ app.get("/test",(req,res)=>{
     
 })
 app.post('/upload', upload.array('files'), async (req, res) => {
+
+
+    console.log("Upload called");
     try {
         const files = req.files.map((file, index) => ({
             path: file.path,
@@ -54,6 +57,7 @@ app.post('/upload', upload.array('files'), async (req, res) => {
             relativePath: req.body.paths[index],
         }));
         const uniqueCode = uuidv4();
+console.log(files);
 
         const newFileEntry = new FileModel({
             uniqueCode,
@@ -61,7 +65,7 @@ app.post('/upload', upload.array('files'), async (req, res) => {
         });
 
         await newFileEntry.save();
-
+console.log("Saved...");
         res.status(201).json({ uniqueCode });
     } catch (error) {
         res.status(500).json({ error: 'Error uploading files' });
