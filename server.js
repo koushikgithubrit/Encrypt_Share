@@ -8,7 +8,7 @@ const zip = require('express-zip');
 const fs = require('fs');
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://koushikadakka2004:Emosort2004@logindatabase.f1qljez.mongodb.net/FileSeeker?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://koushikadakka2004:0oCUzSVRYA8wrSM1@logindatabase.f1qljez.mongodb.net/FileSeeker?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
